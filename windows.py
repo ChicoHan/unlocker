@@ -92,9 +92,12 @@ def joinpath(folder, filename):
 # --------------------------------------------------------------------------------------------------
 def backup(version, vmx, vmx_debug, vmx_stats, vmwarebase):
     backup_path = joinpath(SCRIPT_FOLDER, 'backup')
+
     if not os.path.exists(backup_path):
         os.mkdir(backup_path)
+
     version_path = joinpath(backup_path, version)
+    
     if not os.path.exists(version_path):
         os.mkdir(version_path)
 
@@ -247,6 +250,8 @@ def main():
 
     # Backup files
     backup(productversion, vmx, vmx_debug, vmx_stats, vmwarebase)
+    restore(productversion, vmx, vmx_debug, vmx_stats, vmwarebase)
+    return
 
     # Read the config file
     config = ConfigParser()
