@@ -1,9 +1,13 @@
 @echo off
+
+:: SPDX-FileCopyrightText: © 2014-2021 David Parsons
+:: SPDX-License-Identifier: MIT
+
 setlocal ENABLEEXTENSIONS
 echo.
 echo EFI Unlocker 1.0.2 for VMware
 echo =============================
-echo (c) Dave Parsons 2018-2021
+echo (c) David Parsons 2018-2021
 
 echo.
 set KeyName="HKLM\SOFTWARE\Wow6432Node\VMware, Inc.\VMware Player"

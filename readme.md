@@ -150,4 +150,4 @@ https://github.com/LongSoft/UEFITool
 dd/mm/yy xx.yy.zz
 - dummy
 
-(c) 2011-2021 Dave Parsons
+(c) 2011-2021 David Parsons

@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
+# SPDX-FileCopyrightText: © 2014-2021 David Parsons
+# SPDX-License-Identifier: MIT
+
 set -e
 
 printf "\nEFI Unlocker 1.0.2 for VMware Fusion\n"
 printf "======================================\n"
-printf "(c) Dave Parsons 2018-21\n\n"
+printf "(c) David Parsons 2018-21\n\n"
 
 # Ensure we only use unmodified commands
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin

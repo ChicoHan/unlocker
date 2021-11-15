@@ -1,8 +1,12 @@
 @echo off
+
+:: SPDX-FileCopyrightText: © 2014-2021 David Parsons
+:: SPDX-License-Identifier: MIT
+
 setlocal ENABLEEXTENSIONS
 echo Get macOS VMware Tools 3.0.5
 echo ===============================
-echo (c) Dave Parsons 2011-21
+echo (c) David Parsons 2011-21
 
 
 net session >NUL 2>&1

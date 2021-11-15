@@ -1,9 +1,13 @@
 @echo off
+
+:: SPDX-FileCopyrightText: © 2014-2021 David Parsons
+:: SPDX-License-Identifier: MIT
+
 setlocal ENABLEEXTENSIONS
 echo.
 echo Unlocker 3.0.5 for VMware Workstation
 echo =====================================
-echo (c) Dave Parsons 2011-21
+echo (c) David Parsons 2011-21
 
 net session >NUL 2>&1
 if %errorlevel% neq 0 (

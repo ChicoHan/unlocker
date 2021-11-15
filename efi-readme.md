@@ -11,4 +11,4 @@
 15/05/21 1.0.2
 - Code cleanup for shell scripts
 
-(c) 2018-21 Dave Parsons
+(c) 2018-21 David Parsons

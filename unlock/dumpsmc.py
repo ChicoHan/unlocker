@@ -1,27 +1,10 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
+# SPDX-FileCopyrightText: © 2014-2021 David Parsons
+# SPDX-License-Identifier: MIT
+
 """
-The MIT License (MIT)
-Copyright (c) 2014-2021 Dave Parsons & Sam Bingner
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the 'Software'), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
-
 vSMC Header Structure
 =====================
 Offset  Length  Struct Type Description
@@ -78,7 +61,7 @@ if sys.version_info < (3, 6):
 
 
 def bytetohex(data):
-    return ''.join('{:02X} '.format(c) for c in data)
+    return ''.join('{:02X}'.format(c) for c in data).lower()
 
 
 def printhdr(offset, hdr):
@@ -94,7 +77,7 @@ def printkey(offset, smc_key, smc_data):
     smc_type = smc_key[2][::-1].replace(b'\x00', b' ').decode('UTF-8')
     print(f'0x{offset:08x} '
           f'{smc_key[0][::-1].decode("UTF-8")} '
-          f'{smc_key[1]:03d} '
+          f'{smc_key[1]:02d}  '
           f'{smc_type} '
           f'0x{smc_key[3]:02x} '
           f'0x{smc_key[4]:08x} '
@@ -161,13 +144,13 @@ def dumpsmc(name):
         smc0_key = vmx.find(KEY_KEY, smc0_header)
         smc1_key = vmx.find(KEY_KEY, smc1_header)
 
-        # Patch first vSMC table
+        # Dump first vSMC table
         print('\nappleSMCTableV0 (smc.version = "0")')
         hdr = gethdr(vmx, smc0_header)
         printhdr(smc0_header, hdr)
         dumpkeys(vmx, smc0_key, hdr[1])
 
-        # Patch second vSMC table
+        # Dump second vSMC table
         print('\nappleSMCTableV1 (smc.version = "1")')
         hdr = gethdr(vmx, smc1_header)
         printhdr(smc1_header, hdr)
