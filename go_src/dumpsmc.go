@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: © 2014-2021 Dave Parsons & Sam Bingner
+// SPDX-FileCopyrightText: © 2014-2021 David Parsons
 // SPDX-License-Identifier: MIT
 
 /*
