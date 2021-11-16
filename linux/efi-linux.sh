@@ -4,7 +4,7 @@
 
 set -e
 
-printf "EFI Unlocker 1.0.2 for VMware Workstation\n"
+printf "EFI Unlocker 4.0.0 for VMware Workstation\n"
 printf "=========================================\n"
 printf "(c) David Parsons 2018-21\n\n"
 

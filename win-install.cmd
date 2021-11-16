@@ -1,7 +1,7 @@
 @echo off
 setlocal ENABLEEXTENSIONS
 echo.
-echo Unlocker 3.0.5 for VMware Workstation
+echo Unlocker 4.0.0 for VMware Workstation
 echo =====================================
 echo (c) David Parsons 2011-21
 echo.
