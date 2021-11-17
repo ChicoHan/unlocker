@@ -160,7 +160,7 @@ func vmx() {
 
 	//Get and check file passed as parameter
 	var filename string
-	if os.Args[1] == "" {
+	if len(os.Args) < 2 {
 		println("Please pass a file name!")
 	} else {
 		filename = os.Args[1]
